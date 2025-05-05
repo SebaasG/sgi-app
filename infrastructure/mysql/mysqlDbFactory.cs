@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace sgi_app.infrastructure.mysql
 {
-    public class MysqlDbFactory
+    public class mysqlDbFactory
     {
         
     }
