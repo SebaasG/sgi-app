@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace sgi_app.domain.entities
+{
+    public class Producto
+    {
+
+        public Producto(string id, int stock, int stockMax, DateTime updateAt)
+        {
+            this.Id = id;
+            this.Stock = stock;
+            this.StockMax = stockMax;
+            this.UpdateAt = updateAt;
+
+        }
+        public string Id { get; set; }
+        public string Nombre { get; set; }
+        public int Stock { get; set; }
+        public int StockMin { get; set; }
+        public int StockMax { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdateAt { get; set; }
+        public string harCode { get; set; }
+
+    }
+}
