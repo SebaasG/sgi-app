@@ -44,5 +44,7 @@ namespace sgi_app.infrastructure.mysql
 
             return _conexion;
         }
+
+
     }
 }

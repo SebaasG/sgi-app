@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
+using sgi_app.application.services;
 using sgi_app.domain.factory;
 using sgi_app.infrastructure.mysql;
 
@@ -30,11 +31,13 @@ namespace MiAppConsola
             // Mostrar o usar la cadena
             Console.WriteLine("Cadena de conexión generada:");
             Console.WriteLine(connectionString);
+            IDbFactory factory = new mysqlDbFactory(connectionString);
 
 
             var conec = new mysqlDbFactory(connectionString);
            
-
+            var service = new ProveedorService(conec.CrearProveedorRepository());
+            service.ShowAll();
         }
     }
 }

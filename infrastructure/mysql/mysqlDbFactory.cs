@@ -1,6 +1,7 @@
 using MySql.Data.MySqlClient;
 using sgi_app.domain.factory;
 using sgi_app.domain.ports;
+using sgi_app.infrastructure.repositories;
 
 namespace sgi_app.infrastructure.mysql
 {
@@ -16,7 +17,7 @@ namespace sgi_app.infrastructure.mysql
 
         public IProveedorRepository CrearProveedorRepository()
         {
-            throw new NotImplementedException();
+           return new ProveedorRepository(_connectionString);
         }
 
         public MySqlConnection ObtenerConexion()

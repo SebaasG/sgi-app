@@ -1999,11 +1999,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app.csproj",
+      "projectUniqueName": "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app-1/sgi-app.csproj",
       "projectName": "sgi-app",
-      "projectPath": "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app.csproj",
+      "projectPath": "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app-1/sgi-app.csproj",
       "packagesPath": "/home/camper/.nuget/packages/",
-      "outputPath": "/home/camper/Escritorio/sebaasG/sgi-app/obj/",
+      "outputPath": "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app-1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/camper/.nuget/NuGet/NuGet.Config"

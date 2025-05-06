@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KPXSEklZ0Gw=",
+  "dgSpecHash": "mrudDMVy3Uk=",
   "success": true,
-  "projectFilePath": "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app.csproj",
+  "projectFilePath": "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app-1/sgi-app.csproj",
   "expectedPackageFiles": [
     "/home/camper/.nuget/packages/bouncycastle.cryptography/2.5.1/bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "/home/camper/.nuget/packages/google.protobuf/3.30.0/google.protobuf.3.30.0.nupkg.sha512",

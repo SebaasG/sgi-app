@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sgi-app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a993fab2ef1ada09de2b5ba8dc2c044fd1a5fb6b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42c45ca54c223f94b26ced750bcf4d08f5374491")]
 [assembly: System.Reflection.AssemblyProductAttribute("sgi-app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sgi-app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
