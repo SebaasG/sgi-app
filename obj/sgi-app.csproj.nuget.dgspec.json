@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/camper/SebaasG/sgi-app/sgi-app/sgi-app.csproj": {}
+    "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app.csproj": {}
   },
   "projects": {
-    "/home/camper/SebaasG/sgi-app/sgi-app/sgi-app.csproj": {
+    "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/camper/SebaasG/sgi-app/sgi-app/sgi-app.csproj",
+        "projectUniqueName": "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app.csproj",
         "projectName": "sgi-app",
-        "projectPath": "/home/camper/SebaasG/sgi-app/sgi-app/sgi-app.csproj",
+        "projectPath": "/home/camper/Escritorio/sebaasG/sgi-app/sgi-app.csproj",
         "packagesPath": "/home/camper/.nuget/packages/",
-        "outputPath": "/home/camper/SebaasG/sgi-app/sgi-app/obj/",
+        "outputPath": "/home/camper/Escritorio/sebaasG/sgi-app/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/camper/.nuget/NuGet/NuGet.Config"

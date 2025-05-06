@@ -10,7 +10,7 @@ namespace MiAppConsola
         static void Main(string[] args)
         {
             var configuration = new ConfigurationBuilder()
-                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
 
@@ -31,9 +31,9 @@ namespace MiAppConsola
             Console.WriteLine("Cadena de conexión generada:");
             Console.WriteLine(connectionString);
 
-            IDbFactory factory = new mysqlDbFactory(connectionString);
 
-    
+            var conec = new mysqlDbFactory(connectionString);
+           
 
         }
     }

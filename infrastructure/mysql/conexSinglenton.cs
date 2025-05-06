@@ -25,6 +25,7 @@ namespace sgi_app.infrastructure.mysql
             {
                 try
                 {
+                    
                     _conexion = new MySqlConnection(_connectionString);
                     Console.WriteLine("Conexión a la base de datos creada.");
                 }
