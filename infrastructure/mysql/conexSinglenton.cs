@@ -23,7 +23,17 @@ namespace sgi_app.infrastructure.mysql
         {
             if (_conexion == null)
             {
-                _conexion = new MySqlConnection(_connectionString);
+                try
+                {
+                    _conexion = new MySqlConnection(_connectionString);
+                    Console.WriteLine("Conexión a la base de datos creada.");
+                }
+                catch (MySqlException ex)
+                {
+                    Console.WriteLine("Conexión a la base de datos fffff.");
+                    throw new Exception("Error al crear la conexión a la base de datos: " + ex.Message);
+                }
+         
             }
 
             if (_conexion.State != System.Data.ConnectionState.Open)
