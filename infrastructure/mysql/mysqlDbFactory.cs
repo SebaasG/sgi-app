@@ -1,5 +1,6 @@
 using MySql.Data.MySqlClient;
 using sgi_app.domain.factory;
+using sgi_app.domain.ports;
 
 namespace sgi_app.infrastructure.mysql
 {
@@ -12,6 +13,12 @@ namespace sgi_app.infrastructure.mysql
             _connectionString = connectionString;
             ObtenerConexion();
         }
+
+        public IProveedorRepository CrearProveedorRepository()
+        {
+            throw new NotImplementedException();
+        }
+
         public MySqlConnection ObtenerConexion()
         {
             return ConexionSingleton.Instancia(_connectionString).ObtenerConexion();
