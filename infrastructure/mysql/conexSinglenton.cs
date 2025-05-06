@@ -19,12 +19,18 @@ namespace sgi_app.infrastructure.mysql
         }
         public static conexSinglenton Instace(string connectionString)
         {
-            if (_instance == null)
-            {
-                _instance = new conexSinglenton(connectionString);
-            }
-            return _instance;
+            _instance ??= new conexSinglenton(connectionString);
+        return _instance;
         }
-        
+
+        public MySqlConnection ObtenerConexion()
+    {
+        _connection ??= new MySqlConnection(_connectionString);
+
+        if (_connection.State != System.Data.ConnectionState.Open)
+            _connection.Open();
+
+        return _connection;
+    }
     }
 }
