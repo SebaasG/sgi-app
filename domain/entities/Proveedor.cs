@@ -7,14 +7,9 @@ namespace sgi_app.domain.entities
 {
     public class Proveedor
     {
-        public Proveedor(int id, double dcto)
-        {
-            this.Id = id;
-            this.Dcto = dcto;
-
-        }
+   
         public int Id { get; set; }
-        public string TerceroId { get; set; }
+        public int TerceroId { get; set; }
         public double Dcto { get; set; }
         public int DiaPago { get; set; }
     }

@@ -34,12 +34,12 @@ namespace sgi_app.infrastructure.repositories
             while (reader.Read())
             {
                
-                var proveedor = new Proveedor(
-                    reader.GetInt32("Id"), 
-                    reader.GetDouble("Dcto"))
+                var proveedor = new Proveedor()
                 {
-                    TerceroId = reader.GetString("TerceroId"),
-                    DiaPago = reader.GetInt32("DiaPago")
+                    Id = reader.GetInt32("id"),
+                    TerceroId = reader.GetInt32("tercero_id"),
+                    Dcto = reader.GetDouble("dcto"),
+                    DiaPago = reader.GetInt32("dia_pago")
                 };
 
                 proveedores.Add(proveedor);
