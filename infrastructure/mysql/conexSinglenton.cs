@@ -1,36 +1,37 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 namespace sgi_app.infrastructure.mysql
 {
-    public class conexSinglenton
+    public class ConexionSingleton
     {
-
-        private static conexSinglenton? _instance;
+        private static ConexionSingleton? _instancia;
         private readonly string _connectionString;
-        private MySqlConnection? _connection;
-        private conexSinglenton(string connectionString)
+        private MySqlConnection? _conexion;
+
+        private ConexionSingleton(string connectionString)
         {
             _connectionString = connectionString;
         }
-        public static conexSinglenton Instace(string connectionString)
+
+        public static ConexionSingleton Instancia(string connectionString)
         {
-            _instance ??= new conexSinglenton(connectionString);
-        return _instance;
+            _instancia ??= new ConexionSingleton(connectionString);
+            return _instancia;
         }
 
         public MySqlConnection ObtenerConexion()
-    {
-        _connection ??= new MySqlConnection(_connectionString);
+        {
+            if (_conexion == null)
+            {
+                _conexion = new MySqlConnection(_connectionString);
+            }
 
-        if (_connection.State != System.Data.ConnectionState.Open)
-            _connection.Open();
+            if (_conexion.State != System.Data.ConnectionState.Open)
+            {
+                _conexion.Open();
+            }
 
-        return _connection;
-    }
+            return _conexion;
+        }
     }
 }
