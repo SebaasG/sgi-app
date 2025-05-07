@@ -20,6 +20,11 @@ namespace sgi_app.infrastructure.mysql
            return new ProveedorRepository(_connectionString);
         }
 
+        public IEmpleadosRepository CrearEmpleadoRepository()
+        {
+           return new EmpleadoRepository(_connectionString);
+        }
+
         public MySqlConnection ObtenerConexion()
         {
             return ConexionSingleton.Instancia(_connectionString).ObtenerConexion();
