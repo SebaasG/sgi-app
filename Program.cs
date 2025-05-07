@@ -1,6 +1,8 @@
 ﻿using System;
+using MiAppConsola.ui;
 using Microsoft.Extensions.Configuration;
 using sgi_app.application.services;
+using sgi_app.domain.entities;
 using sgi_app.domain.factory;
 using sgi_app.infrastructure.mysql;
 
@@ -15,20 +17,17 @@ namespace MiAppConsola
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
 
-            // Obtener sección de la configuración
             var dbSettings = configuration.GetSection("DatabaseSettings");
 
-            // Obtener valores individuales
             var server = dbSettings["Server"];
             var port = dbSettings["Port"];
             var database = dbSettings["Database"];
             var user = dbSettings["User"];
             var password = dbSettings["Password"];
 
-            // Construir la cadena de conexión
             var connectionString = $"Server={server};Port={port};Database={database};User={user};Password={password};";
 
-            // Mostrar o usar la cadena
+
             Console.WriteLine("Cadena de conexión generada:");
             Console.WriteLine(connectionString);
             IDbFactory factory = new mysqlDbFactory(connectionString);
@@ -37,7 +36,12 @@ namespace MiAppConsola
             var conec = new mysqlDbFactory(connectionString);
            
             var service = new ProveedorService(conec.CrearProveedorRepository());
-            service.ShowAll();
+
+            //Para solo ejecurat el servicio de ProveedorService
+            var ui = new ProveedorConsoleUI(service);
+            ui.Ejecutar();
+
+             
         }
     }
 }
